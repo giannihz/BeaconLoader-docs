@@ -1,82 +1,116 @@
-# ⚡ BeaconLoader
+<p align="center">
+  <img src="https://i.imgur.com/TOcoUFX.png" width="600">
+</p>
 
-> Advanced **chunk loader system** optimized for performance, TPS stability, and large-scale farms.
+<h1 align="center">⚡ BeaconLoader</h1>
+
+<p align="center">
+  <b>High-performance chunk loader system designed for modern Minecraft servers</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Minecraft-1.21+-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-Paper%20%7C%20Spigot-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Performance-Optimized-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge">
+</p>
 
 ---
 
-## 🚀 Features
+## 🚀 Overview
 
-* ⚡ **TPS-aware engine** → reduces workload automatically under lag
-* 🧠 **Smart entity activation** (villagers & golems)
-* 🧑‍🌾 **Villager AI optimization** (movement, panic, inactivity)
-* 🧊 **Golem freeze system** (no lag when inactive)
-* 📦 **Configurable loaders** (3x3, 5x5, 7x7...)
-* 💾 **Persistent loaders** (SQLite storage)
-* 🔄 **Live reload support** (`/bloader reload`)
-* 🛠️ Built for **Paper / Spigot 1.21+**
+**BeaconLoader** is a next-generation chunk loading system focused on:
+
+* ⚡ Maximum performance
+* 🧠 Intelligent entity control
+* 📉 TPS stability under heavy load
+* 🏗️ Large-scale farm support
+
+Built specifically for servers that need **efficiency without breaking gameplay**.
 
 ---
 
-## 📦 Installation
+## ✨ Key Features
 
-1. Download the plugin `.jar`
-2. Place it in `/plugins`
-3. Start your server
-4. Configure `config.yml`
-5. Done ✅
+### ⚡ Performance Engine
+
+* TPS-aware execution system
+* Dynamic workload reduction
+* Smart tick skipping
+
+### 🧠 Entity Optimization
+
+* Villager AI control
+* Golem freeze system
+* Distance-based activation
+
+### 🧑‍🌾 Farm Stability
+
+* Fully compatible with:
+
+  * Iron farms
+  * Villager breeders
+  * Crop systems
+
+### 📦 Loader System
+
+* Configurable sizes (3x3, 5x5, 7x7)
+* Persistent storage (SQLite)
+* Per-loader chunk management
 
 ---
 
 ## 🎮 Commands
 
-| Command                        | Description          |       |               |
-| ------------------------------ | -------------------- | ----- | ------------- |
-| `/bloader give <player> <3x3   | 5x5                  | 7x7>` | Give a loader |
-| `/bloader reload`              | Reload config        |       |               |
-| `/bloader tps`                 | Show TPS             |       |               |
-| `/bloader tickets`             | Show chunk tickets   |       |               |
-| `/bloader loaderinfo`          | Show loaders         |       |               |
-| `/bloader entityinfo`          | Show entities        |       |               |
-| `/bloader randomticks [world]` | Show randomTickSpeed |       |               |
-| `/bloader debug`               | Debug status         |       |               |
-| `/bloader nms`                 | Server info          |       |               |
+```
+/bloader give <player> <3x3|5x5|7x7>
+/bloader reload
+/bloader tps
+/bloader tickets
+/bloader loaderinfo
+/bloader entityinfo
+/bloader randomticks [world]
+/bloader debug
+/bloader nms
+```
 
 ---
 
 ## ⚙️ Configuration
 
-See full configuration here:
+Full configuration documentation:
 
 👉 [`config.md`](./config.md)
 
 ---
 
-## 🧠 How it works
+## 📊 Performance Impact
 
-BeaconLoader creates a **controlled simulation environment** for chunks:
-
-* Only processes entities when needed
-* Skips ticks when TPS drops
-* Reduces AI load dynamically
-* Keeps farms working without killing performance
+| Scenario        | Result            |
+| --------------- | ----------------- |
+| 1000+ villagers | Stable TPS        |
+| Iron farms      | No break          |
+| Heavy loaders   | Controlled        |
+| Low TPS         | Auto optimization |
 
 ---
 
-## 📊 Performance
+## 🧠 How It Works
 
-* Designed for **high-entity environments**
-* Works perfectly with:
+BeaconLoader does **not** blindly load chunks.
 
-  * Villager farms 🧑‍🌾
-  * Iron farms 🛡️
-  * Crop systems 🌾
-* Minimal impact on MSPT
+Instead it:
+
+* Controls entity simulation
+* Skips unnecessary ticks
+* Reduces AI load dynamically
+* Keeps essential mechanics working
 
 ---
 
 ## 🔧 Requirements
 
-* Java 17+ (recommended 21)
+* Java 17+ (Recommended: 21)
 * Paper / Spigot 1.21+
 
 ---
@@ -85,21 +119,37 @@ BeaconLoader creates a **controlled simulation environment** for chunks:
 
 * ✔ Paper
 * ✔ Spigot
-* ✔ Purpur (recommended)
+* ✔ Purpur
 
 ---
 
-## 📌 Notes
+## 📌 Why BeaconLoader?
 
-* Config is **fully customizable**
-* System is **adaptive to TPS**
-* No need to restart server → just `/bloader reload`
+Unlike traditional chunk loaders:
+
+❌ No lag spikes
+❌ No uncontrolled entity ticking
+❌ No TPS destruction
+
+✔ Smart
+✔ Adaptive
+✔ Optimized
 
 ---
 
-## 👨‍💻 Author
+## 🔮 Roadmap
 
-Developed by **GianniHz**
+* 🌱 Crop simulation system
+* ⚙️ NMS optimization layer
+* 🎛️ GUI loader manager
+* 👥 Per-player limits
+* 📊 Advanced metrics
+
+---
+
+## 👨‍💻 Developer
+
+**GianniHz**
 
 ---
 
@@ -107,21 +157,12 @@ Developed by **GianniHz**
 
 If you like this project:
 
-👉 Give it a ⭐ on GitHub
-👉 Use it on your server
-👉 Improve it
-
----
-
-## 🔥 Future Plans
-
-* Crop simulation module 🌱
-* Advanced NMS hooks ⚙️
-* Per-loader limits 👥
-* GUI system 🎛️
+* ⭐ Star the repository
+* 🚀 Use it on your server
+* 💡 Suggest improvements
 
 ---
 
 ## 📜 License
 
-Private project — documentation public only.
+Private plugin — documentation public only.
